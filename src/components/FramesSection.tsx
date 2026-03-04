@@ -4,10 +4,12 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const FramesSection = () => {
+    const container = useRef<HTMLDivElement>(null);
 
     useGSAP(
         () => {
@@ -42,36 +44,52 @@ const FramesSection = () => {
                 });
             });
         },
+        { scope: container }
     );
     return (
-        <section className="relative w-full">
-            <div id="framesSection" className="relative h-screen text-white text-center uppercase overflow-hidden">
+        <section ref={container} className="relative w-full">
+            <div id="framesSection" className="relative h-screen text-white text-center uppercase overflow-hidden bg-black">
+
                 {/* Frame 1 - Top layer (Visible First) */}
-                <div className="frame absolute inset-0 size-full flex justify-center items-center z-30">
-                    <h2 className="absolute z-40 text-4xl md:text-6xl lg:text-8xl font-black tracking-widest drop-shadow-2xl">
-                        Ephemerality
-                    </h2>
-                    <Image src="/images/digital-1.jpg" alt="" className="size-full object-cover" fill priority />
+                <div className="frame absolute inset-0 size-full z-30 overflow-hidden isolation-isolate">
+                    <div className="relative size-full flex justify-center items-center">
+                        <h2 className="absolute z-40 text-4xl md:text-6xl lg:text-8xl font-black tracking-widest drop-shadow-2xl">
+                            Ephemerality
+                        </h2>
+                        <Image
+                            src="/images/digital-1.jpg"
+                            alt="Ephemerality"
+                            className="size-full object-cover"
+                            fill
+                            priority
+                            unoptimized
+                        />
+                    </div>
                 </div>
 
                 {/* Frame 2 - Middle layer */}
-                <div className="frame absolute inset-0 size-full flex justify-center items-center z-20">
-                    <h2 className="absolute z-40 text-4xl md:text-6xl lg:text-8xl font-black tracking-widest drop-shadow-2xl">
-                        Transience
-                    </h2>
-                    <Image src="/images/digital-2.jpg" alt="" className="size-full object-cover" fill />
+                <div className="frame absolute inset-0 size-full z-20 bg-black overflow-hidden isolation-isolate">
+                    <div className="relative size-full flex justify-center items-center">
+                        <h2 className="absolute z-40 text-4xl md:text-6xl lg:text-8xl font-black tracking-widest drop-shadow-2xl">
+                            Transience
+                        </h2>
+                        <Image src="/images/digital-2.jpg" alt="Transience" className="size-full object-cover" fill />
+                    </div>
                 </div>
 
                 {/* Frame 3 - Bottom layer */}
-                <div className="frame absolute inset-0 size-full flex justify-center items-center z-10">
-                    <h2 className="absolute z-40 text-4xl md:text-6xl lg:text-8xl font-black tracking-widest drop-shadow-2xl">
-                        Ethereal
-                    </h2>
-                    <Image src="/images/digital-3.jpg" alt="" className="size-full object-cover" fill />
+                <div className="frame absolute inset-0 size-full z-10 bg-black overflow-hidden isolation-isolate">
+                    <div className="relative size-full flex justify-center items-center">
+                        <h2 className="absolute z-40 text-4xl md:text-6xl lg:text-8xl font-black tracking-widest drop-shadow-2xl">
+                            Ethereal
+                        </h2>
+                        <Image src="/images/digital-3.jpg" alt="Ethereal" className="size-full object-cover" fill />
+                    </div>
                 </div>
+
             </div>
         </section>
-    )
+    );
 }
 
 export default FramesSection
