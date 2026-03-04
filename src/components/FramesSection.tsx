@@ -51,7 +51,7 @@ const FramesSection = () => {
                     <h2 className="absolute z-40 text-4xl md:text-6xl lg:text-8xl font-black tracking-widest drop-shadow-2xl">
                         Ephemerality
                     </h2>
-                    <Image src="/Images/digital-1.jpg" alt="" className="size-full object-cover" fill priority />
+                    <Image src="/images/digital-1.jpg" alt="" className="size-full object-cover" fill priority />
                 </div>
 
                 {/* Frame 2 - Middle layer */}
@@ -59,7 +59,7 @@ const FramesSection = () => {
                     <h2 className="absolute z-40 text-4xl md:text-6xl lg:text-8xl font-black tracking-widest drop-shadow-2xl">
                         Transience
                     </h2>
-                    <Image src="/Images/digital-2.jpg" alt="" className="size-full object-cover" fill />
+                    <Image src="/images/digital-2.jpg" alt="" className="size-full object-cover" fill />
                 </div>
 
                 {/* Frame 3 - Bottom layer */}
@@ -67,7 +67,7 @@ const FramesSection = () => {
                     <h2 className="absolute z-40 text-4xl md:text-6xl lg:text-8xl font-black tracking-widest drop-shadow-2xl">
                         Ethereal
                     </h2>
-                    <Image src="/Images/digital-3.jpg" alt="" className="size-full object-cover" fill />
+                    <Image src="/images/digital-3.jpg" alt="" className="size-full object-cover" fill />
                 </div>
             </div>
         </section>

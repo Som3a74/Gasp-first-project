@@ -24,7 +24,6 @@ const HeroSection = () => {
                 duration: 2.5,
                 ease: "power1.inOut",
                 onComplete: () => {
-                    console.log("Animation completed");
                     tl.kill();
                 }
             });
@@ -81,24 +80,24 @@ const HeroSection = () => {
             <div id="heroElements" className="bg-linear-to-b from-[#4A90E2] to-white -z-10 h-screen w-full absolute inset-0">
                 {/* Clouds */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <Image src="/Images/cloud.png" alt="cloud" className="large-cloud-1 absolute -bottom-40 -left-40 w-150 md:w-200 opacity-90 blur-sm" width={100} height={100} />
-                    <Image src="/Images/cloud.png" alt="cloud" className="large-cloud-2 absolute -bottom-40 -right-20 w-150 md:w-200 opacity-80" width={100} height={100} />
+                    <Image src="/images/cloud.png" alt="cloud" className="large-cloud-1 absolute -bottom-40 -left-40 w-150 md:w-200 opacity-90 blur-sm" width={100} height={100} />
+                    <Image src="/images/cloud.png" alt="cloud" className="large-cloud-2 absolute -bottom-40 -right-20 w-150 md:w-200 opacity-80" width={100} height={100} />
 
                     {/* Random small clouds */}
-                    <Image src="/Images/cloud.png" alt="cloud" className="cloud absolute top-[15%] left-[10%] w-30 md:w-37.5 opacity-60" width={100} height={100} />
-                    <Image src="/Images/cloud.png" alt="cloud" className="cloud absolute top-[25%] left-[20%] w-20 md:w-25 opacity-40" width={100} height={100} />
-                    <Image src="/Images/cloud.png" alt="cloud" className="cloud absolute top-[10%] right-[30%] w-36 md:w-45 opacity-50" width={100} height={100} />
-                    <Image src="/Images/cloud.png" alt="cloud" className="cloud absolute top-[40%] right-[15%] w-24 md:w-30 opacity-45" width={100} height={100} />
-                    <Image src="/Images/cloud.png" alt="cloud" className="cloud absolute top-[60%] left-[5%] w-40 md:w-50 opacity-30" width={100} height={100} />
+                    <Image src="/images/cloud.png" alt="cloud" className="cloud absolute top-[15%] left-[10%] w-30 md:w-37.5 opacity-60" width={100} height={100} />
+                    <Image src="/images/cloud.png" alt="cloud" className="cloud absolute top-[25%] left-[20%] w-20 md:w-25 opacity-40" width={100} height={100} />
+                    <Image src="/images/cloud.png" alt="cloud" className="cloud absolute top-[10%] right-[30%] w-36 md:w-45 opacity-50" width={100} height={100} />
+                    <Image src="/images/cloud.png" alt="cloud" className="cloud absolute top-[40%] right-[15%] w-24 md:w-30 opacity-45" width={100} height={100} />
+                    <Image src="/images/cloud.png" alt="cloud" className="cloud absolute top-[60%] left-[5%] w-40 md:w-50 opacity-30" width={100} height={100} />
                 </div>
 
                 {/* Cherry Blossom Branches */}
-                <Image src="/Images/branch-1.png" alt="Cherry blossom branch" className="branch-1 absolute right-0 top-0 w-60 md:w-80 lg:w-100 object-contain drop-shadow-lg" width={100} height={100} />
-                <Image src="/Images/branch-1.png" alt="Cherry blossom branch" className="branch-2 absolute left-0 bottom-0 w-72 md:w-96 lg:w-112.5 scale-x-[-1] object-contain drop-shadow-2xl" width={100} height={100} />
+                <Image src="/images/branch-1.png" alt="Cherry blossom branch" className="branch-1 absolute right-0 top-0 w-60 md:w-80 lg:w-100 object-contain drop-shadow-lg" width={100} height={100} />
+                <Image src="/images/branch-1.png" alt="Cherry blossom branch" className="branch-2 absolute left-0 bottom-0 w-72 md:w-96 lg:w-112.5 scale-x-[-1] object-contain drop-shadow-2xl" width={100} height={100} />
             </div>
 
             {/* Content */}
-            <div className="relative z-20 text-center max-w-4xl px-4 flex flex-col items-center select-none">
+            <div className="relative z-20 text-center max-w-4xl px-4 flex flex-col items-center">
                 <p className="hero-text-small text-lg md:text-xl lg:text-2xl font-medium text-black/80 tracking-[0.2em] uppercase mb-4">
                     The <span className="text-white drop-shadow-sm">Clouds</span> Forgot Her
                 </p>
